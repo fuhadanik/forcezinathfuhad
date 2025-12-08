@@ -1,0 +1,23 @@
+{
+  "name": "sf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./assets/output.css --watch",
+    "start": "node server.js",
+    "build": "npx tailwindcss -i ./src/input.css -o ./assets/output.css --minify",
+    "vercel-build": "npx tailwindcss -i ./src/input.css -o ./assets/output.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "http-proxy-middleware": "^3.0.5"
+  }
+}

@@ -1,18 +1,20 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    { "source": "/services/apexrest/:path*", "destination": "https://micronetbd.my.salesforce-sites.com/services/apexrest/:path*" },
-    { "source": "/", "destination": "/src/index.html" },
-    { "source": "/index", "destination": "/src/index.html" },
-    { "source": "/home", "destination": "/src/home.html" },
-    { "source": "/createTask", "destination": "/src/createTask.html" },
-    { "source": "/createProject", "destination": "/src/createProject.html" },
-    { "source": "/editTask", "destination": "/src/editTask.html" },
-    { "source": "/index.html", "destination": "/src/index.html" },
-    { "source": "/home.html", "destination": "/src/home.html" },
-    { "source": "/createTask.html", "destination": "/src/createTask.html" },
-    { "source": "/createProject.html", "destination": "/src/createProject.html" },
-    { "source": "/editTask.html", "destination": "/src/editTask.html" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "." }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/server.js"
+    }
   ]
 }

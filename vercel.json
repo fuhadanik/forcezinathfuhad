@@ -4,6 +4,11 @@
   "rewrites": [
     { "source": "/services/apexrest/:path*", "destination": "https://micronetbd.my.salesforce-sites.com/services/apexrest/:path*" },
     { "source": "/", "destination": "/src/index.html" },
+    { "source": "/index", "destination": "/src/index.html" },
+    { "source": "/home", "destination": "/src/home.html" },
+    { "source": "/createTask", "destination": "/src/createTask.html" },
+    { "source": "/createProject", "destination": "/src/createProject.html" },
+    { "source": "/editTask", "destination": "/src/editTask.html" },
     { "source": "/index.html", "destination": "/src/index.html" },
     { "source": "/home.html", "destination": "/src/home.html" },
     { "source": "/createTask.html", "destination": "/src/createTask.html" },

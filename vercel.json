@@ -2,6 +2,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
+    { "source": "/services/apexrest/:path*", "destination": "https://micronetbd.my.salesforce-sites.com/services/apexrest/:path*" },
     { "source": "/", "destination": "/src/index.html" },
     { "source": "/index.html", "destination": "/src/index.html" },
     { "source": "/home.html", "destination": "/src/home.html" },

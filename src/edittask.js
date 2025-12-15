@@ -17,7 +17,7 @@ document.getElementById("Status__c").onchange = () => {
     let ts = document.getElementById("Status__c").value;
     
     console.log("Task status changed to:", ts);
-    document.getElementById("endtime").style.display = ts == "Completed" ? 'flex' : 'none';
+    document.getElementById("enddatestatus").style.display = ts == "Completed" ? 'block' : 'none';
 };
 
 // When the DOM is fully loaded
@@ -81,6 +81,11 @@ function setFormValues(form, params) {
             form[field].value = params[field];
         }
     });
+
+    // Show end date field if status is Completed
+    if (params.status === "Completed") {
+        document.getElementById("enddatestatus").style.display = 'block';
+    }
 
     // Set owner name and ID
     if (params.user_name) {

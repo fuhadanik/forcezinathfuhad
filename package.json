@@ -2,9 +2,9 @@
   "name": "sf",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node index.js",
     "dev": "npx tailwindcss -i ./src/input.css -o ./assets/output.css --watch",
     "build": "npx tailwindcss -i ./src/input.css -o ./assets/output.css --minify",
     "vercel-build": "npx tailwindcss -i ./src/input.css -o ./assets/output.css --minify"

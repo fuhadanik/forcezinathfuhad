@@ -23,6 +23,7 @@ app.use('/services/apexrest', createProxyMiddleware({
 // Serve static files from the 'src' directory
 app.use('/src', express.static(path.join(__dirname, 'src')));
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
+app.use('/', express.static(path.join(__dirname, 'src'))); // Serve src at root for .html files
 
 // Serve root index.html
 app.get('/', (req, res) => {
